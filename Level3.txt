@@ -1,0 +1,38 @@
+<h1><%= zombie.name %></h1>
+
+<p>
+  <%= zombie.graveyard %>
+</p>
+
+
+<p>
+<%= link_to zombie.name, zombie %>
+</p>
+
+
+<ul>
+<% zombies.each do |zombie| %>
+  <li><%= zombie.name %></li>
+<% end %>
+</ul>
+
+
+<ul>
+  <% zombies.each do |zombie| %>
+    <li>
+      <%= zombie.name %>
+      <% if zombie.tweets.size > 1 %>
+      SMART ZOMBIE 
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+
+<ul>
+  <% zombies.each do |zombie| %>
+    <li>
+      <%= link_to zombie.name, edit_zombie_path(zombie) %>
+    </li>
+  <% end %>
+</ul>

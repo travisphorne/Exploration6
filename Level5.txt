@@ -1,0 +1,23 @@
+TwitterForZombies::Application.routes.draw do
+  resources :zombies
+end
+
+
+TwitterForZombies::Application.routes.draw do
+  get 'undead' => 'zombies#undead'
+end
+
+
+TwitterForZombies::Application.routes.draw do
+  get '/undead', to: redirect('/zombies')
+end
+
+
+TwitterForZombies::Application.routes.draw do
+  root to: 'zombies#index'
+end
+
+
+TwitterForZombies::Application.routes.draw do
+  get '/zombies/:name', to: 'zombies#index', :as => 'graveyard'
+end

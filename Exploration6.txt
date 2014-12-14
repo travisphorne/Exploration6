@@ -1,0 +1,13 @@
+Zombie.find(1)
+
+Zombie.create
+
+Zombie.last
+
+Zombie.order(:name)
+
+z = Zombie.find(3)
+z.graveyard = "Benny Hills Memorial"
+z.save
+
+Zombie.find(3).destroy
